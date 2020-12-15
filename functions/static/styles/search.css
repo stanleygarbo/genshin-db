@@ -1,0 +1,77 @@
+main {
+  background: url("/images/klee.png");
+  margin-top: 90px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .wrapper {
+  z-index: 1;
+}
+
+main .wrapper .container {
+  width: 1000px;
+  margin-top: 50px;
+  background-color: #3b4354;
+  position: relative;
+  box-shadow: 0px 0px 10px #00000050;
+}
+
+main .wrapper .container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background-color: #ffdc63;
+  z-index: -1;
+  transform: skew(2deg, 2deg);
+  box-shadow: 0px 0px 10px #00000050;
+}
+
+main .wrapper .container form {
+  width: 100%;
+  padding: 20px;
+}
+
+main .wrapper .container form input {
+  border: none;
+  box-shadow: 0px 0px 10px #3b435450 inset;
+  padding: 12px;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  font-size: 19px;
+}
+
+::placeholder {
+  font-size: 19px;
+}
+
+main .wrapper .container .results {
+  padding: 20px;
+}
+
+main .wrapper .container .results .result {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #1f242c;
+}
+
+main .wrapper .container .results .result .result-image {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff70;
+}
+
+main .wrapper .container .results .result h3 {
+  color: #ffdc63;
+  padding: 5px;
+}

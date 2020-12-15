@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+        <link rel="stylesheet" href="/styles/index.css">
+    </head>
+    <body>
+        <div class="side-arrows"></div>
+
+        <%- include('../partials/header'); %>
+
+        <main>
+            <div class="first-section">
+                <div class="bg-banner"></div>
+
+                <div class="greetings">
+                    <h1>Genshin Impact Item infos</h1>
+                    <h2>Welcome to Genshin-DB! Get all the Info you need about Genshin Impact items</h2>
+                </div>
+
+                <div class="options">
+                    <a href="/artifacts">
+                        <div class="option artifacts">
+                            <h3>Artifacts</h3>
+                        </div>
+                    </a>
+                    <a href="/weapons">
+                        <div class="option weapons">
+                            <h3>Weapons</h3>
+                        </div>
+                    </a>
+                    <a href="/gastronomy">
+                        <div class="option search">
+                            <h3>Gastronomy</h3>
+                        </div>
+                    </a>
+                </div>
+
+                
+            </div>
+            <div class="filters">
+                <section>
+                    <h3>Filters</h3>
+                    <button id="all-element" class="element-filter-btns">All</button>
+                    <button id="Anemo" class="element-filter-btns"></button>
+                    <button id="Pyro" class="element-filter-btns"></button>
+                    <button id="Electro" class="element-filter-btns"></button>
+                    <button id="Hydro" class="element-filter-btns"></button>
+                    <button id="Geo" class="element-filter-btns"></button>
+                    <button id="Cryo" class="element-filter-btns"></button>
+                </section>
+                <section>
+                    <button id="all-weapon" class="weapon-filter-btns">All</button>
+                    <button id="Sword" class="weapon-filter-btns"></button>
+                    <button id="Claymore" class="weapon-filter-btns"></button>
+                    <button id="Polearm" class="weapon-filter-btns"></button>
+                    <button id="Bow" class="weapon-filter-btns"></button>
+                    <button id="Catalyst" class="weapon-filter-btns"></button>
+                </section>
+            </div>
+            
+            <div class="characters-banner">
+                <% data.map(item=>{ %> 
+                    <a href="/characters/<%= item.name %>" class="<%= item.type %> <%= item.weapon %> character-info">
+                        <%- include('../partials/character-icon',{item}) %> 
+                    </a>
+                <% }) %> 
+            </div>
+
+        </main>
+
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+
+        <script>
+            const elementFilterBtns = document.querySelectorAll('.element-filter-btns')
+            const characterElement = document.querySelectorAll('.character-info')
+            let currentFilteredWeapon = 'all-weapon',currentFilteredElement = 'all-element'
+            document.getElementById('all-element').classList.add('activeFilterBtn')
+            
+            elementFilterBtns.forEach(item=>{
+                item.addEventListener('click',onElementFilterClick)
+            })
+            function onElementFilterClick(e){
+                elementFilterBtns.forEach(item=>{
+                    item.classList.remove('activeFilterBtn')
+                })
+                currentFilteredElement = e.toElement.id
+                characterElement.forEach(item=>{
+                    if(item.className.split(' ')[0] === e.toElement.id || e.toElement.id === 'all-element'){
+                        // && item.className.split(' ')[1] === currentFilteredWeapon 
+                        if(item.className.split(' ')[1] === currentFilteredWeapon || currentFilteredWeapon==='all-weapon'){
+                            item.style.display = 'flex'
+                        }
+                        e.toElement.classList.add('activeFilterBtn')
+                    }
+                    else{
+                        item.style.display = 'none'
+                    }
+
+                })
+            }
+
+            const weaponFilterBtns = document.querySelectorAll('.weapon-filter-btns')
+            const character = document.querySelectorAll('.character-info')
+            document.getElementById('all-weapon').classList.add('activeFilterBtn')
+            
+            weaponFilterBtns.forEach(item=>{
+                item.addEventListener('click',onFilterWeaponClick)
+            })
+            function onFilterWeaponClick(e){
+                console.log(currentFilteredElement)
+                weaponFilterBtns.forEach(item=>{
+                    item.classList.remove('activeFilterBtn')
+                })
+                currentFilteredWeapon = e.toElement.id
+                console.log(e.toElement.id)
+                character.forEach(item=>{
+                    if(item.className.split(' ')[1] === e.toElement.id || e.toElement.id === 'all-weapon'){
+                        if(item.className.split(' ')[0] === currentFilteredElement || currentFilteredElement === 'all-element'){
+                            item.style.display = 'flex'
+                        }
+                        e.toElement.classList.add('activeFilterBtn')
+                    }
+                    else{
+                        item.style.display = 'none'
+                    }
+                })
+            }
+        </script>
+
+    </body>
+</html>

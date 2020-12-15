@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %> 
+    <link rel="stylesheet" href="/styles/character.css">
+</head>
+<body>
+    <%- include('../partials/header'); %>
+    <main>
+        <div class="character-banner">
+            <%- include('../partials/character-icon',{item:data}) %> 
+            <div class="description">
+                <h3>Description: </h3>
+                <p><%= data.description %></p>
+                <span>Location: <%= data.location %> </span>
+            </div>
+        </div>
+        <div class="talents">
+            <% data.skills.map(item=>{ %>
+                <div class="talent">
+                    <div class="name">
+                        <h3><%= item.name %> </h3>
+                        <%= item.type %>
+                    </div>
+                    <%- item.description %> 
+                    <br>
+                    <br>
+                    <% if (item.modifiers){ %> 
+                        <h3>Skill Attributes</h3>
+                        <br>
+                        <table>
+                            <% item.modifiers.map(i=>{ %> 
+                                <tr>
+                                    <td><%= i.stat %></td>
+                                    <td><%= i.value %></td>
+                                </tr>
+                            <% }) %> 
+                        </table>
+                    <% } %> 
+                </div>
+            <% }) %> 
+        </div>
+    </main>
+</body>
+</html>

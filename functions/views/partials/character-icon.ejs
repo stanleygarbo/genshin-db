@@ -1,0 +1,13 @@
+<% if(item.rarity===5){color = 'gold'} %> 
+<% if(item.rarity===4){color = 'purple'} %> 
+<% if(item.rarity===3){color = 'blue'} %> 
+<% if(item.rarity===2){color = 'green'} %> 
+<% if(item.rarity===1){color = 'white'} %> 
+<div class="character-icon-wrapper">
+    <div class="character-icon <%= color %> ">
+        <img class="element" src="https://rerollcdn.com/GENSHIN/Elements/Element_<%= item.type %>.png" alt="<%= item.type %> ">
+        <img class="character-img" src="<%= item.imgURL %>" alt="<%= item.name %> ">
+    </div>
+    <span><%= item.name %></span>
+</div>
+ 

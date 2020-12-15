@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %> 
+    <link rel="stylesheet" href="/styles/search.css">
+</head>
+<body>
+    <%- include('../partials/header'); %>
+    <main>
+        <div class="wrapper">
+            <div class="container">
+                <form action="/search" method="GET">
+                    <input name="searchFor" type="text" placeholder="search">
+                </form>
+                <div class="results">
+                    <div class="result">
+                        <div class="result-image"></div>
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

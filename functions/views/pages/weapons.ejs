@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %> 
+    <link rel="stylesheet" href="/styles/weapons.css">
+</head>
+<body>
+    <%- include('../partials/header'); %>
+    <main>
+        <div class="wrapper">
+            <div class="container">
+                <% if(data) { %>
+                    <% data.map(item=>{color='' %>
+                        
+                        <% if(item.rarity===5){color = 'gold'} %> 
+                        <% if(item.rarity===4){color = 'purple'} %> 
+                        <% if(item.rarity===3){color = 'blue'} %> 
+                        <% if(item.rarity===2){color = 'green'} %> 
+                        <% if(item.rarity===1){color = 'white'} %> 
+                        <div class="weapon">
+                            <div class="img-bg-color <%= color %> ">
+                                <img src="<%= item.imgURL %> " alt="weapon">
+                                <div class="item-stats-wrapper">
+                                    <div class="item-stats">
+                                        <span>Base ATK</span> 
+                                        <span><%= item.base %></span>
+                                    </div>
+                                    <div class="item-stats">
+                                        <span><%= item.secondary %></span> 
+                                        <span>---</span>
+                                    </div>
+                                </div>
+                                <span class="stars">
+                                    <% for(let i=0;i < item.rarity; i++){ %>&#9733;<% } %> 
+                                </span>
+                            </div>
+                            <div class="weapon-info">
+                                <h2><%= item.name %></h2>
+                                <p><%- item.bonus %> </p>
+                                <p>Source: <%- item.location %> </p>
+                            </div>
+                        </div>
+                    <% }) %> 
+                <% } %>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

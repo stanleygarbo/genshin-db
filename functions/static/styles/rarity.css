@@ -1,0 +1,15 @@
+.gold {
+  background: linear-gradient(45deg, #8f6638, #c5863d);
+}
+.purple {
+  background: linear-gradient(45deg, #aa81be, #7b6395);
+}
+.blue {
+  background: linear-gradient(45deg, #626987, #5b8baa);
+}
+.green {
+  background: linear-gradient(45deg, #546f66, #5c9678);
+}
+.white {
+  background: linear-gradient(45deg, #5b5f63, #817f7d);
+}

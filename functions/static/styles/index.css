@@ -1,0 +1,195 @@
+body {
+  background-color: #282e3b;
+}
+
+.bg-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: url("/images/klee.png");
+  background-attachment: fixed;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-banner::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  /* background: #0e103260;     */
+  background: linear-gradient(
+    180deg,
+    rgba(19, 28, 49, 0.5),
+    rgba(19, 28, 49, 0.5)
+  );
+  backdrop-filter: blur(8px);
+}
+
+.side-arrows {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 70%;
+  background: url("/images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 50% 100%;
+}
+
+main .first-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 0px 50px 0px;
+}
+
+main .first-section .greetings {
+  width: 80%;
+  text-align: center;
+}
+
+main .first-section .greetings h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+main .first-section .greetings h2 {
+  font-size: 50px;
+  color: #fff;
+}
+
+.options {
+  width: 600px;
+  padding: 40px 0px 0px 0px;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: #0e1032; */
+  color: #fff;
+}
+.option {
+  padding: 0;
+  width: 200px;
+  text-align: center;
+  position: relative;
+  background-image: url("/images/button.svg");
+  background-size: 100% 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option:hover {
+  transform: scale(1.05);
+}
+
+.option h3 {
+  color: #ffdc63;
+  font-weight: 100;
+  padding: 10px;
+}
+
+.filters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d222c;
+  color: #b3bfd8;
+  flex-direction: column;
+}
+
+.filters section h3 {
+  margin-right: 30px;
+}
+
+.filters section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filters section button {
+  color: #fff;
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.filters .activeFilterBtn {
+  background-color: #2f3747;
+}
+
+.filters #Anemo {
+  background-image: url(https://rerollcdn.com/GENSHIN/Elements/Element_Anemo.png);
+}
+.filters #Pyro {
+  background-image: url(https://rerollcdn.com/GENSHIN/Elements/Element_Pyro.png);
+}
+.filters #Cryo {
+  background-image: url(https://rerollcdn.com/GENSHIN/Elements/Element_Cryo.png);
+}
+.filters #Electro {
+  background-image: url(https://rerollcdn.com/GENSHIN/Elements/Element_Electro.png);
+}
+.filters #Geo {
+  background-image: url(https://rerollcdn.com/GENSHIN/Elements/Element_Geo.png);
+}
+.filters #Hydro {
+  background-image: url(https://rerollcdn.com/GENSHIN/Elements/Element_Hydro.png);
+}
+
+.filters #Sword {
+  background-image: url("/images/sword-p.png");
+}
+
+.filters #Claymore {
+  background-image: url("/images/claymore-p.png");
+}
+
+.filters #Catalyst {
+  background-image: url("/images/catalyst-p.png");
+}
+
+.filters #Bow {
+  background-image: url("/images/bow-p.png");
+}
+
+.filters #Polearm {
+  background-image: url("/images/polearm-p.png");
+}
+
+.characters-banner {
+  width: 100%;
+  padding: 20px 200px;
+  /* background: url("/images/translucentbanner.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat; */
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.characters-banner > * {
+  margin: 20px;
+}

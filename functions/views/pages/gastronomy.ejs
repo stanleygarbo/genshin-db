@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %> 
+    <link rel="stylesheet" href="/styles/artifacts.css">
+</head>
+<body>
+    <%- include('../partials/header'); %>
+    <main>
+        <div class="wrapper">
+            <div class="container">
+                <table>
+                    <% if (data){ let color%> 
+                        <tr>
+                            <th>Set</th>
+                            <th></th>
+                            <th>Stars</th>
+                            <th>ingredients</th>
+                            <th>bonus</th>
+                        </tr>
+                        <% data.map((val, index)=>{ color = ''%> 
+                            <tr>
+                                <% if(val.rarity===5){color = 'gold'} %> 
+                                <% if(val.rarity===4){color = 'purple'} %> 
+                                <% if(val.rarity===3){color = 'blue'} %> 
+                                <td>
+                                    <img src="<%= val.imgURL %> " class="result-image <%= color %>  "></img>
+                                </td>
+                                <td>
+                                    <h3><%= val.name %> </h3>
+                                </td>
+                                <td>
+                                    <div class="stars-container">
+                                        <% for(i = 0; i < val.rarity; i++){ %> 
+                                            <span class="stars">&#9733;</span>
+                                        <% } %> 
+                                    </div>
+                                </td>
+                                <td>
+                                    <% val.ingredients.map(item=>{  %>
+                                        <%= item.count %>x <%= item.name %>, 
+                                    <% }) %> 
+                                </td>
+                                <td><%= val.bonus %> </td>
+                            </tr>
+                        <% }) %> 
+                    <% } %> 
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,336 @@
+{
+  "abyss": [
+    {
+      "floor": "9",
+      "bonus": [
+        "Pyro DMG dealt by all party members increased by 75%",
+        "Electro DMG dealt by all party members increased by 75%",
+        "Overloaded DMG increased by 200%"
+      ],
+      "element": ["Pyro", "Electro"]
+    },
+    {
+      "floor": "10",
+      "bonus": [
+        "Your character will be periodically inflicted with Smoldering Flames, causing you to take Pyro DMG until the inflicted Pyro element is removed."
+      ]
+    },
+    {
+      "floor": "11",
+      "bonus": [
+        "Electro DMG dealt by all party members increased by 75%",
+        "Cryo DMG dealt by all party members increased by 75%",
+        "Superconduct DMG increased by 300%, and decreases the target's Physical RES by an additional 20%."
+      ],
+      "element": ["Cryo", "Electro"]
+    },
+    {
+      "floor": "12",
+      "bonus": [
+        "Your character will be periodically inflicted with Condensed Ice, greatly increasing your Stamina Consumption until the inflicted Cryo element is removed.",
+        "Pyro DMG dealt by all party members increased by 75%"
+      ],
+      "element": ["Pyro"]
+    }
+  ],
+  "talentUpMats": [
+    {
+      "name": "Freedom",
+      "id": "1",
+      "days": ["Monday", "Thursday"],
+      "characters": [
+        "Amber",
+        "Barbara",
+        "Diona",
+        "Klee",
+        "Sucrose",
+        "Tartaglia"
+      ]
+    },
+    {
+      "name": "Prosperity",
+      "id": 2,
+      "days": ["Monday", "Thursday"],
+      "characters": ["Keqing", "Ningguang", "Qiqi", "Xiao"]
+    },
+    {
+      "name": "Diligence",
+      "id": 3,
+      "days": ["Tuesday", "Friday"],
+      "characters": ["Chongyun", "Xiangling"]
+    },
+    {
+      "name": "Resistance",
+      "id": 4,
+      "days": ["Tuesday", "Friday"],
+      "characters": ["Bennett", "Diluc", "Jean", "Mona", "Noelle", "Razor"]
+    },
+    {
+      "name": "Ballad",
+      "id": 5,
+      "days": ["Wednesday", "Saturday"],
+      "characters": ["Fischl", "Kaeya", "Lisa", "Venti"]
+    },
+    {
+      "name": "Gold",
+      "id": 6,
+      "days": ["Wednesday", "Saturday"],
+      "characters": ["Beidou", "Xingqiu", "Xinyan", "Zhongli"]
+    },
+    {
+      "name": "Tail of Boreas",
+      "id": 7,
+      "days": ["Andrius"],
+      "characters": ["Qiqi", "Venti", "Xingqiu"]
+    },
+    {
+      "name": "Ring of Boreas",
+      "id": 8,
+      "days": ["Andrius"],
+      "characters": ["Barbara", "Keqing", "Klee", "Mona"]
+    },
+    {
+      "name": "Spirit Locket of Boreas",
+      "id": 9,
+      "days": ["Andrius"],
+      "characters": ["Fischl", "Kaeya", "Ningguang", "Sucrose"]
+    },
+    {
+      "name": "Dvalin's Plume",
+      "id": 10,
+      "days": ["Dvalin"],
+      "characters": ["Bennett", "Diluc", "Jean"]
+    },
+    {
+      "name": "Dvalin's Claw",
+      "id": 11,
+      "days": ["Dvalin"],
+      "characters": ["Lisa", "Noelle", "Razor", "Xiangling"]
+    },
+    {
+      "name": "Dvalin's Sigh",
+      "id": 12,
+      "days": ["Dvalin"],
+      "characters": ["Amber", "Beidou", "Chongyun"]
+    },
+    {
+      "name": "Tusk of Monoceros Caeli",
+      "id": 13,
+      "days": ["Tartaglia"],
+      "characters": ["Xinyan"]
+    },
+    {
+      "name": "Shard of a Foul Legacy",
+      "id": 14,
+      "days": ["Tartaglia"],
+      "characters": ["Diona", "Tartaglia"]
+    },
+    {
+      "name": "Shadow of the Warrior",
+      "id": 15,
+      "days": ["Tartaglia"]
+    }
+  ],
+  "weaponUpMats": [
+    { "name": "Decarabian", "id": 1, "days": ["Monday", "Thursday"] },
+    { "name": "Guyun", "id": 2, "days": ["Monday", "Thursday"] },
+    { "name": "Mist Veiled Elixir", "id": 3, "days": ["Tuesday", "Friday"] },
+    { "name": "Boreal Wolf", "id": 4, "days": ["Tuesday", "Friday"] },
+    { "name": "Aerosiderite", "id": 5, "days": ["Wednesday", "Saturday"] },
+    {
+      "name": "Dandelion Gladiator",
+      "id": 6,
+      "days": ["Wednesday", "Saturday"]
+    }
+  ],
+  "characterAscensionMats": [
+    {
+      "name": "Basalt Pillar",
+      "id": "1",
+      "characters": ["Ningguang", "Noelle", "Zhongli"]
+    },
+    { "name": "Calla Lily", "id": 2, "characters": ["Diona", "Kaeya"] },
+    { "name": "Cecilia", "id": 3, "characters": ["Venti"] },
+    {
+      "name": "Cleansing Heart",
+      "id": 4,
+      "characters": ["Barbara", "Mona", "Tartaglia", "Xingqiu"]
+    },
+    {
+      "name": "Cor Lapis",
+      "id": 5,
+      "characters": ["Chongyun", "Keqing", "Zhongli"]
+    },
+    {
+      "name": "Damaged Mask",
+      "id": 6,
+      "characters": [
+        "Chongyun",
+        "Jean",
+        "Noelle",
+        "Razor",
+        "Traveler (Anemo)",
+        "Traveler (Geo)",
+        "Xingqiu"
+      ]
+    },
+    { "name": "Dandelion Seed", "id": 7, "characters": ["Jean"] },
+    {
+      "name": "Divining Scroll",
+      "id": 8,
+      "characters": ["Barbara", "Klee", "Qiqi"]
+    },
+    {
+      "name": "Everflame Seed",
+      "id": 9,
+      "characters": ["Amber", "Bennett", "Diluc", "Klee", "Xiangling", "Xinyan"]
+    },
+    {
+      "name": "Firm Arrowhead",
+      "id": 10,
+      "characters": ["Amber", "Diona", "Fischl", "Xiao"]
+    },
+    { "name": "Glaze Lily", "id": 11, "characters": ["Ningguang"] },
+    {
+      "name": "Hoarfrost Core",
+      "id": 12,
+      "characters": ["Chongyun", "Diona", "Kaeya", "Qiqi"]
+    },
+    {
+      "name": "Hurricane Seed",
+      "id": 13,
+      "characters": ["Jean", "Sucrose", "Venti", "Xiao"]
+    },
+    { "name": "Jueyun Chili", "id": 14, "characters": ["Xiangling"] },
+    {
+      "name": "Lightning Prism",
+      "id": 15,
+      "characters": ["Beidou", "Fischl", "Keqing", "Lisa", "Razor"]
+    },
+    { "name": "Noctilous Jade", "id": 16, "characters": ["Beidou"] },
+    {
+      "name": "Philanemo Mushroom",
+      "id": 17,
+      "characters": ["Barbara", "Klee", "Mona"]
+    },
+    { "name": "Qingxin", "id": 18, "characters": ["Xiao"] },
+    {
+      "name": "Recruit's Insignia",
+      "id": 19,
+      "characters": ["Diluc", "Ningguang", "Tartaglia"]
+    },
+    { "name": "Silk Flower", "id": 20, "characters": ["Xingqiu"] },
+    {
+      "name": "Slime Condensate",
+      "id": 21,
+      "characters": ["Lisa", "Venti", "Xiangling", "Zhongli"]
+    },
+    {
+      "name": "Small Lamp Grass",
+      "id": 22,
+      "characters": ["Amber", "Diluc", "Fischl"]
+    },
+    { "name": "Starconch", "id": 23, "characters": ["Tartaglia"] },
+    {
+      "name": "Treasure Hoarder Insignia",
+      "id": 24,
+      "characters": ["Beidou", "Bennett", "Kaeya", "Xinyan"]
+    },
+    { "name": "Valberry", "id": 25, "characters": ["Lisa", "Noelle"] },
+    { "name": "Violetgrass", "id": 26, "characters": ["Qiqi", "Xinyan"] },
+    {
+      "name": "Whopperflower Nectar",
+      "id": 27,
+      "characters": ["Keqing", "Mona", "Sucrose"]
+    },
+    {
+      "name": "Windwheel Aster",
+      "id": 28,
+      "characters": ["Bennett", "Traveler (Anemo)", "Traveler (Geo)", "Sucrose"]
+    },
+    { "name": "Wolfhook", "id": 29, "characters": ["Razor"] }
+  ],
+  "elementalReactions": [
+    {
+      "name": "Pyro",
+      "reactions": "Vaporize",
+      "id": 1,
+      "tier": 1,
+      "characters": [
+        {
+          "name": "Diluc",
+          "role": "DPS",
+          "element": "Pyro",
+          "option": ["Klee"]
+        },
+        {
+          "name": "Bennett",
+          "role": "Support",
+          "element": "Pyro",
+          "option": ["Xiangling"]
+        },
+        {
+          "name": "Mona",
+          "role": "Support",
+          "element": "Hydro",
+          "option": ["Fischl", "Venti"]
+        },
+        {
+          "name": "Xingqiu",
+          "role": "Support",
+          "element": "Hydro",
+          "option": ["Mona"]
+        }
+      ]
+    },
+    {
+      "name": "Electro",
+      "reactions": "Superconductor",
+      "id": 2,
+      "tier": 1,
+      "characters": [
+        {
+          "name": "Keqing",
+          "role": "DPS",
+          "element": "Electro",
+          "option": ["Razor"]
+        },
+        { "name": "Fischl", "role": "Support", "element": "Electro" },
+        {
+          "name": "Qiqi",
+          "role": "Support",
+          "element": "Cryo",
+          "option": ["Diona", "Kaeya"]
+        },
+        {
+          "name": "Bennett",
+          "role": "Support",
+          "element": "Pyro",
+          "option": ["Venti", "Xingqiu"]
+        }
+      ]
+    },
+    {
+      "name": "Anemo",
+      "reactions": "Swirl",
+      "id": 3,
+      "tier": 1,
+      "characters": [
+        { "name": "Venti", "role": "DPS", "element": "Anemo" },
+        {
+          "name": "Jean",
+          "role": "Support",
+          "element": "Anemo",
+          "option": ["Sucrose"]
+        },
+        {
+          "name": "Klee",
+          "role": "Support",
+          "element": "Pyro",
+          "option": ["Fischl", "Mona"]
+        },
+        { "name": "Bennett", "role": "Support", "element": "Pyro" }
+      ]
+    }
+  ]
+}
